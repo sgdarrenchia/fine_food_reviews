@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Machine Learning App with Flask
+		</div>
+		<h2>Sentiment Analysis of Amazon Fine Food Reviews</h2>
+	<!-- 	<img src="https://www.corpgov.net/wp-content/uploads/2012/05/amazon-logo.jpeg">
+ -->
+	</div>
+	</header>
+	<p style="color:blue;font-size:30;text-align: left;"><b>Results for Review</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:blue;">Positive</h2>
+	<img src="http://www.clker.com/cliparts/l/M/g/8/7/T/black-and-white-thumbs-up-md.png" style="width:94px;height:100px;">
+
+	{% elif prediction == 0%}
+	<h2 style="color:red;">Negative</h2>
+	<img src="http://chittagongit.com//images/thumbs-down-icon-png/thumbs-down-icon-png-1.jpg"
+	style="width:94px;height:100px;">
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
