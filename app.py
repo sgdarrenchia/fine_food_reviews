@@ -56,10 +56,10 @@ def predict():
 	# brf.score(X_test_cvect,y_test)
 
 	# Alternative Usage of Saved Model
-	brf_model = open('/Users/darrenchia/Desktop/Flask/sentiment/brf_model.pkl','rb')
+	brf_model = open('/Users/darrenchia/Desktop/Flask/sentiment_analysis/fine_food_reviews/brf_model.pkl','rb')
 	brf = joblib.load(brf_model)
 
-	brf_cvect = open('/Users/darrenchia/Desktop/Flask/sentiment/cvect.pkl','rb')
+	brf_cvect = open('/Users/darrenchia/Desktop/Flask/sentiment_analysis/fine_food_reviews/cvect.pkl','rb')
 	cvect = joblib.load(brf_cvect)
 
 	if request.method == 'POST':
